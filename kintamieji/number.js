@@ -72,14 +72,86 @@ console.log (weekday);
 
 console.clear ();
 
+// let gg = 0;
+// console.log (gg);
+
+// gg = gg + 100;
+// console.log (gg);
+
+
+
+// gg += + 100;
+// console.log (gg);
+
+// gg /= 5;
+// console.log (gg);
+
+// gg -= 10;
+// console.log (gg);
+
+// gg *= 3;
+// console.log (gg);
+
+// gg %= 7;
+// console.log (gg);
+
+console.clear ();
+
+let i = 0;
+console.log (i);
+
+i = i + 1; 
+console.log (i);
+
+i += 1; 
+console.log (i);
+
+i ++; 
+console.log (i);
+
+i ++; 
+console.log (i);
+
+i ++; 
+console.log (i);
+
+++i; 
+console.log (i);
+
+console.clear ();
+
+let m = 0;
+console.log (m++);
+
+console.clear ();
+
+
+
+
+
 let gg = 0;
 console.log (gg);
 
-gg = gg + 100;
+gg = gg + 200;
 console.log (gg);
 
-gg += + 100;
+gg += 50;
 console.log (gg);
 
-gg += + 100;
+gg ++;
+console.log (gg);
+
+gg ++;
+console.log (gg);
+
+gg /= 4;
+console.log (gg);
+
+gg -= 10;
+console.log (gg);
+
+gg *= 3;
+console.log (gg);
+
+gg %= 7;
 console.log (gg);
