@@ -12,6 +12,12 @@ operatoriai:
 Savybes: 
 .length - grazina tekse simboliu kieki (ilgi)
 
+
+
+INTERPRETAVIMAS
+
+tuscias string - false
+netuscias - true
 */
 
 const single = 'labas rytas Lietuva';

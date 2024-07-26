@@ -1,3 +1,13 @@
+/*
+operatoriu skaiciavimo vykdymo eiliskumas
+1 * /
+2 + -
+
+*/
+
+
+
+
 console.log (123);
 console.clear ();
 const age = 99;

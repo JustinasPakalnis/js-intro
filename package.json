@@ -6,6 +6,7 @@
     "dev": "node ./index.js",
     "number": "node --watch ./kintamieji/number.js",
     "string": "node --watch ./kintamieji/string.js",
+    "boolean": "node --watch ./kintamieji/boolean.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
