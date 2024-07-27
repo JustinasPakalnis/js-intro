@@ -90,7 +90,7 @@ console.log(true || false && false);
 console.log(false || false && false);
 console.log('4--------');
 
-
+console.log('0-------------NAMU DARBAI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 console.log(true && true && true && true); //true
 console.log(true && true && true && false); //F
 console.log(true && true && false && true); //F
@@ -107,7 +107,7 @@ console.log(false && false && true && false); //F
 console.log(false && true && false && false); //F
 console.log(true && false && false && false); //F
 console.log(false && false && false && false); //F
-console.log('5--------');
+console.log('1--------');
 console.log(true || true && true && true); //T
 console.log(true || true && true && false); //T
 console.log(true || true && false && true); //T
@@ -124,7 +124,7 @@ console.log(false || false && true && false); //F
 console.log(false || true && false && false); //F
 console.log(true || false && false && false); //T
 console.log(false || false && false && false); //F
-console.log('6--------');
+console.log('2--------');
 console.log(true && true || true && true); //T
 console.log(true && true || true && false); //T
 console.log(true && true || false && true); //T
@@ -141,7 +141,7 @@ console.log(false && false || true && false); //F
 console.log(false && true || false && false); //F
 console.log(true && false || false && false); //F
 console.log(false && false || false && false); //F
-console.log('7--------');
+console.log('3--------');
 console.log(true && true && true || true); //T
 console.log(true && true && true || false); //T
 console.log(true && true && false || true); //T
@@ -158,7 +158,7 @@ console.log(false && false && true || false); //F
 console.log(false && true && false || false); //F
 console.log(true && false && false || false); //F
 console.log(false && false && false || false); //F
-console.log('8--------');
+console.log('4--------');
 console.log(true || true && true || true); //T
 console.log(true || true && true || false); //T
 console.log(true || true && false || true); //T
@@ -175,7 +175,7 @@ console.log(false || false && true || false); //F
 console.log(false || true && false || false); //F
 console.log(true || false && false || false); //T
 console.log(false || false && false || false); //F
-console.log('9--------');
+console.log('5--------');
 console.log(true || true || true && true); //T
 console.log(true || true || true && false); //T
 console.log(true || true || false && true); //T
@@ -192,7 +192,24 @@ console.log(false || false || true && false); //F
 console.log(false || true || false && false); //T
 console.log(true || false || false && false); //T
 console.log(false || false || false && false); //F
-console.log('10--------');
+console.log('6--------');
+console.log(true && true || true || true); //T
+console.log(true && true || true || false); //T
+console.log(true && true || false || true); //T
+console.log(true && false || true || true); //T
+console.log(false && true || true || true); //T
+console.log(true && false || true || false); //T
+console.log(false && true || false || true); //T
+console.log(true && true || false || false); //T
+console.log(false && false || true || true); //T
+console.log(true && false || false || true); //T
+console.log(false && true || true || false); //T
+console.log(false && false || false || true); //T
+console.log(false && false || true || false); //T
+console.log(false && true || false || false); //F
+console.log(true && false || false || false); //F
+console.log(false && false || false || false); //F
+console.log('7--------');
 console.log(true || true || true || true); //T
 console.log(true || true || true || false); //T
 console.log(true || true || false || true); //T
@@ -210,7 +227,7 @@ console.log(false || true || false || false); //T
 console.log(true || false || false || false); //T
 console.log(false || false || false || false); //F
 
-112 sprendinių
+//128 sprendinių
 
 
 
