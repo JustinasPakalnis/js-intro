@@ -1,5 +1,5 @@
 // Object - OBJEKTAS
-
+//"Use strict"
 
 
 // const mark1 = 10;
@@ -205,7 +205,7 @@ let index = 0;
 
 // let totalKiekis = 0;
 // console.log ('----------------------------------------------');
-// for (let i=0; i <= prekes.length; i++){
+// for (let i=0; i < prekes.length; i++){
 //     totalKiekis = totalKiekis + prekes[i]['prekiuKiekis'];
 //     console.log (totalKiekis);
    
@@ -257,7 +257,7 @@ index2++;
 console.log ('Prekė: ' + prekes[index2]['prekesPavadinimas'].padEnd(15) + ' | Prekės kaina: ' + prekes[index2]['prekesKaina'] + ' eur |' + ' Prekių kiekis: ' + prekes[index2]['prekiuKiekis'] + ' | Suma: ' + Math.round((prekes[index2]['prekesKaina']*prekes[index2]['prekiuKiekis'])*100)/100 + ' eur');
 index2++;
 
-index3= 0;
+let index3= 0;
 sumTotal = (prekes[index3]['prekiuKiekis'])*(prekes[index3]['prekesKaina']);
 index3++;
 sumTotal =sumTotal + (prekes[index3]['prekiuKiekis'])*(prekes[index3]['prekesKaina']);
@@ -303,6 +303,83 @@ index4++;
 svorisTotal = svorisTotal + (prekes[index4]['prekesSvoris'])*(prekes[index4]['prekiuKiekis']);
 
 console.log('Viso krepšelio Svoris: ' + svorisTotal/1000 + ' kg');
+
+
+console.clear();
+
+const pc = {
+    monitor: {
+        width: 1980,
+        height: 1080,
+    },
+    ram: 16,
+    hd: 100,
+    keyboard: 'en',
+    mouse: true,
+    power: false,
+};
+
+console.log (pc.ram);
+console.log (pc['power']);
+
+const param = 'power';
+// i param isideda pc > power
+//Jei yra arba nera kabuciu jei nera kabuciu ima is kintamojo o su kabutem is object
+console.log (pc[param]);
+console.log (pc['power']);
+
+console.log (pc['monitor']['height']);
+console.log (pc.monitor.width);
+
+console.clear();
+
+const crazy = {
+    title: 'Some crazy ...',
+    description: 'Prepare yourself!',
+    'crazy marks': [10, 2, 8, 4, 6],
+    123: {
+        one: true,
+        two: true,
+        three: true,
+    }
+};
+
+console.log(crazy);
+console.log(crazy.title);
+console.log(crazy['description']);
+console.log(crazy.title.description);
+console.log(crazy['crazy marks']);
+console.log(crazy['123']);
+console.log(crazy.title.length);
+//String = supaprastintas array, array = supaprastintas object
+
+console.clear();
+
+const house = {
+    width: 16,
+    height: 3,
+    depth: 5,
+};
+console.log(house);
+
+const houseKeys = Object.keys(house)
+console.log(houseKeys);
+// SUrandame visus raktus esamus objekte, mums grazina masyva
+console.log(Object.keys(house));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
