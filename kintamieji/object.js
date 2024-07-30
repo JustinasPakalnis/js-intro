@@ -1,7 +1,11 @@
-// Object - OBJEKTAS
-//"Use strict"
+/*
+Object - OBJEKTAS
+"Use strict"
+Dinaminis reiksmiu priskyrimas
 
 
+
+*/
 // const mark1 = 10;
 // const mark2 = 2;
 // const mark3 = 8;
@@ -34,8 +38,8 @@
 // const student4Age = 66;
 // const sutdent4IsMarried = true;
 
-//objektai
-//key-value poru sarasas
+// // objektai
+// // key-value poru sarasas
 // const empty ={};
 
 // const student1 = {
@@ -76,7 +80,7 @@
 // console.log (student1['name']);
 // console.log (student1['age']);
 
-//supaprastinta sintakse
+// // supaprastinta sintakse
 
 // console.log (student4.name);
 // console.log (student4.age);
@@ -367,28 +371,42 @@ console.log(houseKeys);
 // SUrandame visus raktus esamus objekte, mums grazina masyva
 console.log(Object.keys(house));
 
+console.clear();
 
+const zoo = {
+    liutas: 2,
 
+};
 
+console.log(zoo.liutas);
 
+zoo.liutas += 3;
+console.log(zoo.liutas);
 
+zoo.dramblys = 1;
+console.log(zoo.dramblys);
 
+zoo.dramblys += 2;
+console.log(zoo.dramblys);
 
+console.log(zoo);
 
+//const zoo? kodel constanta pakeicia. Nepeeraso is esmes o tik papildo
 
+zoo.lape = 4;
+console.log(zoo.lape);
 
+console.log(zoo);
 
+const marks = [10, 2, 8, 4, 6];
+console.log(marks);
 
+console.log(marks[0]);
+marks[1]=10;
 
+console.log(marks);
 
-
-
-
-
-
-
-
-
+console.log(marks[1]);
 
 
 
