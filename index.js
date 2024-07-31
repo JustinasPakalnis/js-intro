@@ -226,19 +226,20 @@ console.log( daugyba( skaicius1, skaicius3 ) );
 
 console.log('------------------------------------------------------------------------------------');
 
-function skaitmenuKiekisSkaiciuje (a){
-    if (a !== Number) {
-        return (a)
-    } else {
-        return ('Pateikta netinkamo tipo reikšmė.');
-    }
-}
-console.log( skaitmenuKiekisSkaiciuje( 1 ) );
-console.log( skaitmenuKiekisSkaiciuje( 781 ) );
-console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
-
-
-
+// function skaitmenuKiekisSkaiciuje (a){
+    
+//     if (a == Number) {
+//         return (a)
+//     } else {
+//         return ('Pateikta netinkamo tipo reikšmė.');
+//     }
+// }
+// console.log( skaitmenuKiekisSkaiciuje( 5  ) );
+// console.log( skaitmenuKiekisSkaiciuje( 781 ) );
+// console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
+// console.log( skaitmenuKiekisSkaiciuje( true ) );
+// console.log( skaitmenuKiekisSkaiciuje( "asd" ) );
+// console.log( skaitmenuKiekisSkaiciuje( NaN ) );
 
 
 

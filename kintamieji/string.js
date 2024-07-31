@@ -5,6 +5,7 @@ string inicijavimo simboliai
 
 ' vieguba kabute
 " dviguba kabute
+` backtick kabute
 
 operatoriai:
 + sujungia stringus

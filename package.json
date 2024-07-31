@@ -12,6 +12,8 @@
     "object": "node --watch ./kintamieji/object.js",
     "null": "node --watch ./kintamieji/null.js",
     "if": "node --watch ./kintamieji/if.js",
+    "ternary": "node --watch ./kintamieji/ternary.js",
+    "function": "node --watch ./function/function.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

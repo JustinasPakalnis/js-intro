@@ -18,8 +18,12 @@ naudotini:
 nenaudotini: 
 ==, !=,
 
-
-
+ZINOTINI ARBA CRAZY DALYKAI
+-true yra pozityvus, false yra negatyvus
+-visi skaiciai yra pozityvus iskyrus 0
+-visi stringa iyra pozityvus, isskyrus tusti ('')
+-visi array ([]) yra pozityvus
+-visi object ({}) yra pozityvus
 
 */
 
@@ -93,13 +97,37 @@ if (1 == true) {
 }
 
 
+console.clear();
 
 
 
 
+const colors = ['red', 'green', 'blue'];
+const color = 'suris';
+
+if (color === colors [0]){
+    console.log('Raudona');
+} else {
+    if (color === colors [1]) {
+        console.log('zalia');
+    } else {
+        if (color === colors [2]) {
+            console.log('melyna');
+        } else {
+            console.log('Ups.....');
+        }
+    }
+}
+
+console.clear();
 
 
 
+if ('') {
+    console.log('Pozityvas');
+} else {
+    console.log('Negatyvas');
+}
 
 
 
