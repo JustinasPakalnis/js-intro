@@ -1,6 +1,7 @@
 {
   "name": "js-intro",
   "version": "1.0.0",
+  "type":"module",
   "main": "index.js",
   "scripts": {
     "dev": "node ./index.js",
@@ -16,6 +17,7 @@
     "function": "node --watch ./function/function.js",
     "homework": "node --watch ./homework.js",
     "for": "node --watch ./ciklas/for.js",
+    "import": "node --watch ./function/import.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
