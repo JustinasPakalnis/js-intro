@@ -14,6 +14,8 @@
     "if": "node --watch ./kintamieji/if.js",
     "ternary": "node --watch ./kintamieji/ternary.js",
     "function": "node --watch ./function/function.js",
+    "homework": "node --watch ./homework.js",
+    "for": "node --watch ./ciklas/for.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -5,7 +5,7 @@ FUNCTION - perpanaudojamas logikos blokas
 
 
 */
-
+console.log('-----------------------------------------------------------------------------');
 const students = [
     {
         name: 'Jonas',
@@ -15,7 +15,33 @@ const students = [
         name: 'Maryte',
         marks: [9, 8, 7, 6, 5],
     },
+    {
+        name: 'Petras',
+        marks: [8, 8, 8, 8, 8, 8, 8, 8, 8],
+    },
+    {
+        name: 'Ona',
+        marks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    },
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('-----------------------------------------------------------------------------');
 
 //Studento, vardu Jonas, pazymiu vidurkis yra 6.
 //Studento, vardu Maryte, pazymiu vidurkis yra 6.
