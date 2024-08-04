@@ -51,10 +51,8 @@ for (let i=0; i<students.length; i++) { //Ciklas vykdys tiek kartu kiek yra obje
         for (let a=0; a < students[i]['marks'].length; a++) { //Vykdomas sis ciklas tiek kartu kiek parinkto objekto yra key values 
             tValue = tValue + students[i]['marks'][a]; //sumuojama visi pazymiai
         }
-        console.log('Studento '+ students[i]['name'] + ' pazymiu vidurkis yra: ' + tValue / students[i]['marks'].length); //Isvedamas atsakymas i console
-        } else { 
-            console.log('Prasileidau ir katoja students.length viska :/ '); //vistiek isvedamas nors tikiuosi jog isves tik tuo atveju jeigu neatitiks salyga ar yra studentas objekte
-        }
+        return('Studento '+ students[i]['name'] + ' pazymiu vidurkis yra: ' + tValue / students[i]['marks'].length); //Isvedamas atsakymas i console
+        } 
 }
 }
 console.log(vidurkis('Jonas'));
