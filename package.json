@@ -19,6 +19,7 @@
     "for": "node --watch ./ciklas/for.js",
     "import": "node --watch ./function/import.js",
     "suma-intervale": "node --watch ./uzd/suma-intervale.js",
+    "string-reverse": "node --watch ./uzd/string-reverse.js",
     "typeof": "node --watch ./kintamieji/typeof.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
