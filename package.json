@@ -18,6 +18,8 @@
     "homework": "node --watch ./homework.js",
     "for": "node --watch ./ciklas/for.js",
     "import": "node --watch ./function/import.js",
+    "suma-intervale": "node --watch ./uzd/suma-intervale.js",
+    "typeof": "node --watch ./kintamieji/typeof.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

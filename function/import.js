@@ -31,37 +31,37 @@ import * as stuff from '../lib/stuff.js'
 // console.log(h);
 
 
-// const students = [
-//     {
-//         name: 'Jonas',
-//         marks: [10, 2, 8, 4, 6],
-//     },
-//     {
-//         name: 'Maryte',
-//         marks: [9, 8, 7, 6, 5],
-//     },
-//     {
-//         name: 'Petras',
-//         marks: [8, 8, 8, 8, 8, 8, 8, 8, 8],
-//     },
-//     {
-//         name: 'Ona',
-//         marks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-//     },
-// ];
+const students = [
+    {
+        name: 'Jonas',
+        marks: [10, 2, 8, 4, 6],
+    },
+    {
+        name: 'Maryte',
+        marks: [9, 8, 7, 6, 5],
+    },
+    {
+        name: 'Petras',
+        marks: [8, 8, 8, 8, 8, 8, 8, 8, 8],
+    },
+    {
+        name: 'Ona',
+        marks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    },
+];
 
 
-console.log(stuff.vidurkis('Petras'));
+console.log(stuff.vidurkis('Petras', students));
 
 
-console.log(stuff.krapas);
 
 
-console.log(stuff.veikejai[2]);
 
-const veikejai2 = ['Betmenas', 'Jokeris', 'Galvanosis', 'Suris'];
+// console.log(stuff.veikejai[2]);
 
-console.log(stuff.rinkejas(0));
+// const veikejai2 = ['Betmenas', 'Jokeris', 'Galvanosis', 'Suris'];
+
+// console.log(stuff.rinkejas(0));
 
 
 
