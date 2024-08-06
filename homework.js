@@ -392,39 +392,11 @@ console.clear();
 
 
 
-// function didziausiasSkaiciusSarase(skc) {
-//     let didziausias = 0;
-//     let index0 = 0;
-//     let index1 = 1;
-//     // console.log('>>>>>>', skc.length);
-//     if (typeof skc === 'string') {
-//         return 'Pateikta netinkamo tipo reikšmė.';
-//     }
-//     if (skc.length === 0) {
-//         return 'Pateiktas sąrašas negali būti tuščias.';
-//     }
-
-//     skc.forEach(number => { didziausias = number > didziausias ? number : didziausias; })
-//     return didziausias;
-//   }
-
-//   function didziausiasSkaiciusSarase(skc) {
-//     let didziausias = -Infinity;
-//     let index0 = 0;
-//     let index1 = 1;
-//     let n = skc.length;
-//   for (let i = 0; i != n; ++i) {
-//     if (didziausiasSkaiciusSarase[i] > didziausias) {
-//         didziausias = didziausiasSkaiciusSarase[i];
-//     }
-//   }
-//   return didziausias;
-// }
-  
+ 
 
 function didziausiasSkaiciusSarase(skc) {
     if (typeof skc === 'string') {
-    return 'Pateikta netinkamo tipo reikšmė.';
+        return 'Pateikta netinkamo tipo reikšmė.';
     }
     if (skc.length === 0) {
         return 'Pateiktas sąrašas negali būti tuščias.';
@@ -449,4 +421,37 @@ console.log( didziausiasSkaiciusSarase( [] ) );
 
 
 
+
+
+console.log('-----------------------------------------');
+
+function isrinktiRaides(raides, skaicius ) {
+    if (typeof raides != 'string') {
+        return 'Pirmasis kintamasis yra netinkamo tipo.';
+    }
+    if (raides.length === 0 || raides.length > 100) {
+        return 'Pirmojo kintamojo reikšmė yra netinkamo dydžio.';
+    }
+    if (typeof skaicius != 'number') {
+        return 'Antrasis kintamasis yra netinkamo tipo.';
+    }
+    if (skaicius <= 0 ) {
+        return 'Antrasis kintamasis turi būti didesnis už nulį.';
+    }
+    if (skaicius > raides.length ) {
+        return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.';
+    }
+    let atrusiuota = '';
+        for (let i = skaicius - 1;  i < raides.length;i += skaicius) {
+        atrusiuota += raides[i];
+        }
+    return ('Rezultatas: ' + atrusiuota);
+}
+
+
+console.log( isrinktiRaides( 'abcdefg', 2 ) );
+console.log( isrinktiRaides( 'abcdefghijkl', 3 ) );
+console.log( isrinktiRaides( 'abc', 0 ) );
+console.log( isrinktiRaides( 'abc', 4 ) );
+console.log( isrinktiRaides( 1561, 2 ) );
 

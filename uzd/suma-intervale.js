@@ -56,9 +56,19 @@ function suma(a, b) {
 
 
     let suma = 0;
-    for (a; a <= b; a++){
+    if (a === 0) {
+        suma = b * (b +1)/2;
+    } else if  (b === 0) {
+        suma = b * (b -1)/2;
+    } else if (a < 0 && b > 0) {
+        suma = b * (b+1)/2;
+        suma += a * (a-1)/2;
+    } else {
+        for (a; a <= b; a++){
         suma += a;
         }
+    }
+
     //3. Logikoje gauto rezultato validavimas
     //4. Rezultato grazinimas
     return suma;
@@ -71,7 +81,7 @@ console.log(suma(-70, 30));
 console.log(suma(574, 815));
 console.log(suma(0, 0));
 
-
+console.log(suma(0, 10000000000));
 
 
 
