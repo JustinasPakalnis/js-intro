@@ -46,3 +46,12 @@ for (const names of names2) {
 
 console.log(longName);
 
+console.clear();
+
+
+
+
+
+
+
+

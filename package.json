@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node ./index.js",
     "index": "node --watch ./index.js",
+    "codewars": "node --watch ./codewars.js",
     "number": "node --watch ./kintamieji/number.js",
     "string": "node --watch ./kintamieji/string.js",
     "boolean": "node --watch ./kintamieji/boolean.js",

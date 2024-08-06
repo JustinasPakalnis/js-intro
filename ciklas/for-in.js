@@ -61,23 +61,3 @@ for (const key in abc) {
 
 
 
-function past(h, m, s){
-    let h1 = 0;
-    let m1 = 0;
-    let s1 = 0;
-    if (h >= 0 && h <= 59) {
-      h1 = h*3600000;
-    }
-    if (m >= 0 && m <= 59) {
-      m1 = m*60000;
-    }    
-    if (s >= 0 && s <= 59) {
-      s1 = s*1000;
-    }
-     return h1+m1+s1; 
-      
-      
-  }
-
-
-  console.log(past(1, 1, 1));
