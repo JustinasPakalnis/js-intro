@@ -22,9 +22,11 @@
     "for-in": "node --watch ./ciklas/for-in.js",
     "while": "node --watch ./ciklas/while.js",
     "import": "node --watch ./function/import.js",
+    "arrow-function": "node --watch ./function/arrow-function.js",
     "suma-intervale": "node --watch ./uzd/suma-intervale.js",
     "string-reverse": "node --watch ./uzd/string-reverse.js",
     "typeof": "node --watch ./kintamieji/typeof.js",
+    "method-number": "node --watch ./methods/number.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

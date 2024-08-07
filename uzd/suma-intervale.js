@@ -37,20 +37,18 @@ function rangeSum(start, end) {
         sum = end * (end + 1) / 2;
     } else if (end === 0) {
         sum = start * (start - 1) / 2;
+        sum = sum* -1;
     } else if (start < 0 && end > 0) {
         sum = end * (end + 1) / 2;
         sum += start * (start - 1) / 2;
     } else if (start < 0 && end < 0) {
         sum = start * (start - 1) / 2;
-        sum -= end * (end - 1) / 2;
+        sum -= end * (end + 1) / 2;
+        sum = sum * -1
     } else if (start > 0 && end > 0) {
         sum = end * (end + 1) / 2;
-        sum -= start * (start + 1) / 2;
-    } else {
-        for (let i = start; i <= end; i++) {
-            sum += i;
-        }
-    }
+        sum -= start * (start - 1) / 2;
+    } 
     return sum;
 }
 
@@ -62,15 +60,14 @@ console.log(rangeSum(574, 815), '-->', 168069);
 console.log(rangeSum(0, 0), '-->', 0);
 
 console.log('---');
-console.log(rangeSum(0, 5), '-->', 55);
+console.log(rangeSum(0, 10), '-->', 55);
 console.log(rangeSum(0, 100), '-->', 5050);
-
-console.log(rangeSum(0, 500), '-->', 500500);
+console.log(rangeSum(0, 1000), '-->', 500500);
 console.log(rangeSum(0, 10_000), '-->', 50005000);
 console.log(rangeSum(0, 100_000), '-->', 5000050000);
 console.log(rangeSum(0, 100_000_000), '-->', 5000000050000000);
 console.log(rangeSum(0, 1_000_000_000), '-->', 500000000500000000);
-console.log(rangeSum(0, 10_000_000_000), '-->', 50000000005000000000);
+console.log(rangeSum(0, 10_000_000_00), '-->', 50000000005000000000);
 
 console.log(rangeSum(-10, 0), '-->', -55);
 console.log(rangeSum(-100, 0), '-->', -5050);
