@@ -4,7 +4,7 @@ import { multi } from '../lib/multi.js'
 import { div } from '../lib/div.js'
 import { plus, minus, star, slash} from '../lib/math.js'
 import { vidurkis } from '../lib/stuff.js'
-import * as stuff from '../lib/stuff.js'
+// import * as stuff from '../lib/stuff.js'
 
 // const a = sum(7, 5)s
 // console.log(a);
@@ -51,7 +51,7 @@ const students = [
 ];
 
 
-console.log(stuff.vidurkis('Petras', students));
+console.log(vidurkis('Petras', students));
 
 
 

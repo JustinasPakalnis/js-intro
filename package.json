@@ -28,6 +28,9 @@
     "typeof": "node --watch ./kintamieji/typeof.js",
     "method-number": "node --watch ./methods/number.js",
     "method-string": "node --watch ./methods/string.js",
+    "method-array": "node --watch ./methods/array.js",
+    "method-array-map": "node --watch ./methods/array-map.js",
+    "method-array-filter": "node --watch ./methods/array-filter.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
