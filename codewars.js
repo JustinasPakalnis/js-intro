@@ -448,19 +448,133 @@ console.log(filter_list([1,2,'a','b']));
 console.log(filter_list([1,'a','b',0,15]));
 console.log(filter_list([1,2,'aasf','1','123',123]));
 
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Home work. change end of name
+
+console.log('NAMU DARBAS vardo (bendraties forma) konvertavimas');
+
+function converter(vardas) { 
+    const result = vardas.endsWith('ė') ? vardas.slice(0, -1) + 'e'
+    : vardas.endsWith('as') ? vardas.slice(0, -1) + 'i'
+    : vardas.endsWith('us') ? vardas.slice(0, -2) + 'au'
+    : vardas
+    return 'Sveiki, ' + result + '!';
+}
+
+console.log(converter('Jonas'));
+console.log(converter('Petras'));
+console.log(converter('Ona'));
+console.log(converter('Marytė'));
+console.log(converter('Darius'));
+console.log(converter('Marija'));
+
 
 console.clear();
 console.log('-------------------------------------------------------------------');
-//Perfect square
+//sum in array
 
-function findNextSquare(sq) {
+
+function sum (numbers) {
+  let total = 0;
+  if (numbers.length === 0) {
+  return 0 };
+  for (const count of numbers) {
+    total += count;
+    console.log(total);
     
-    return Math.sqrt(sq);
   }
+  return total;
+}
 
-console.log(findNextSquare(121));
-console.log(findNextSquare(625));
-console.log(findNextSquare(155));
+
+
+console.log(sum([]), 0);
+console.log(sum([1, 5.2, 4, 0, -1]), 9.2);
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//sort numbers
+
+function descendingOrder(n){
+  const split = Array.from(n.toString(), Number);
+  console.log(split);
+  const reversed = split.sort().reverse();
+  console.log(reversed);
+  const final = reversed.join('');
+  return parseInt(final);
+}
+
+
+
+
+
+
+
+console.log(descendingOrder(123456789), 987654321);
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//initials
+
+
+function abbrevName(name){
+  return name.split(" ").map((n)=>n[0]).join(".").toUpperCase();
+  // return initials.toUpperCase()
+
+
+}
+
+console.log(abbrevName("patrick Feenan"), "P.F");
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Double each value in array
+
+function maps(x){
+  let newArr = [];
+  for (const count of x) {
+    newArr.push(count+count)}
+    return newArr;
+    
+}
+
+console.log(maps([2, 2, 2, 2, 2, 2]), [4, 4, 4, 4, 4, 4]);
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//square sum of array
+
+function squareSum(numbers){
+  let sum = 0;
+  for (const count of numbers) {
+    sum += (count*count)}
+    return sum;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
