@@ -554,6 +554,263 @@ function squareSum(numbers){
     return sum;
 }
 
+console.clear();
+console.log('-------------------------------------------------------------------');
+//REDUCE training
+
+// const array1 = [1, 2, 3, 4];
+
+// const initialValue = 0;
+// const sumWithInitial = array1.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue, initialValue,
+// );
+
+// console.log(sumWithInitial);
+
+const array2 = [15, 16, 17, 18, 19];
+
+function reducer(accumulator, currentValue, index) {
+  const returns = accumulator + currentValue;
+  console.log(
+    `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+  );
+  return returns;
+}
+
+array2.reduce(reducer);
+
+const result1 = array2.reduce(
+  (accumulator, currentValue) => accumulator + currentValue ,
+);
+
+
+console.log(result1 / array2.length);
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Exes and Ohs
+
+// function XO(str) {
+//   let countX = 0;
+//   let countO = 0;
+//   for (let i = 0; i <= str.length; i++) {
+//     if (str[i] === 'O' || str[i] === 'o') {
+//       countO++;
+
+      
+//     } else if (str[i] === 'X' || str[i] === 'x') {
+//       countX++;
+
+//     }
+//   }
+//   return countO === countX;
+// }
+
+
+function XO(str) {
+  console.log(str.toLowerCase().split());
+  
+  return str=str.toLowerCase(), str.split("o").length == str.split("x").length
+}
+
+
+
+
+console.log(XO("xxOo"),true);
+console.log(XO("xxxm"),false);
+console.log(XO('xo'),true);
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Regex validate PIN code
+
+
+
+// function validatePIN (pin) {
+//   let regex = /^[-+]?[0-9]+\.[0-9]+$/;
+//   let isValidated = regex.test(pin);
+
+//   if (isValidated === 'false') {
+//     return false
+//   }
+//   if (typeof pin === 'string' && !isNaN(pin)  && pin.length === 4 || pin.length === 6) {
+//     return true;
+//   }
+//   return false;
+// }
+
+
+
+function validatePIN (pin) {
+  return /^(\d{4}|\d{6})$/.test(pin);
+}
+
+console.log(validatePIN('123456'), true);
+console.log(validatePIN('a256'), false);
+console.log(validatePIN('1256'), true);
+console.log(validatePIN(1232), false);
+console.log(validatePIN('-1.234'), false);
+
+
+// console.log(!isNaN('-1.234'));
+
+
+// console.log(Number.isInteger(parseFloat('-1.234')));
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//People on the bus
+
+
+
+const number = function(busStops){
+  let numPeople = 0;
+  for (const people of busStops) {
+    console.log(people);
+    numPeople += people[0] - people[1];
+  }
+  return numPeople
+}
+
+
+
+console.log(number([[10,0],[3,5],[5,8]]),5);
+console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]),17);
+console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]),21);
+console.log(number([[0,0]]),0);
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Get the Middle Character
+
+function getMiddle(s) {
+  let index = s.length/2;
+  let index2 =  (s.length-1)/2;
+  // console.log(index2);
+  
+  if (s.length % 2 === 0 ) {
+  return s[index-1]+s[index] ;
+  } else if (s.length % 2 === 1 ) {
+    return s[index2];
+}
+}
+
+
+
+console.log(getMiddle("test"),"es");
+console.log(getMiddle("testing"),"t");
+console.log(getMiddle("middle"),"dd");
+console.log(getMiddle("A"),"A");
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Replace With Alphabet Position
+
+function alphabetPosition(text) {
+  let newText = text.split('');
+
+  let textFilter = newText.filter(char => /[a-zA-Z]/.test(char));
+
+  let newArr = [];
+  for (const log of textFilter) {
+
+    if (log === 'a' || log === 'A') {
+      newArr.push('1')
+    } else if (log === 'b' || log === 'B') {
+      newArr.push('2')
+    } else if (log === 'c' || log === 'C') {
+      newArr.push('3')
+    } else if (log === 'd' || log === 'D') {
+      newArr.push('4')
+    } else if (log === 'e' || log === 'E') {
+      newArr.push('5')
+    } else if (log === 'f' || log === 'F') {
+      newArr.push('6')
+    } else if (log === 'g' || log === 'G') {
+      newArr.push('7')
+    } else if (log === 'h' || log === 'H') {
+      newArr.push('8')
+    } else if (log === 'i' || log === 'I') {
+      newArr.push('9')
+    } else if (log === 'j' || log === 'J') {
+      newArr.push('10')
+    } else if (log === 'k' || log === 'K') {
+      newArr.push('11')
+    } else if (log === 'l' || log === 'L') {
+      newArr.push('12')
+    } else if (log === 'm' || log === 'M') {
+      newArr.push('13')
+    } else if (log === 'n' || log === 'N') {
+      newArr.push('14')
+    } else if (log === 'o' || log === 'O') {
+      newArr.push('15')
+    } else if (log === 'p' || log === 'P') {
+      newArr.push('16')
+    } else if (log === 'q' || log === 'Q') {
+      newArr.push('17')
+    } else if (log === 'r' || log === 'R') {
+      newArr.push('18')
+    } else if (log === 's' || log === 'S') {
+      newArr.push('19')
+    } else if (log === 't' || log === 'T') {
+      newArr.push('20')
+    } else if (log === 'u' || log === 'U') {
+      newArr.push('21')
+    } else if (log === 'v' || log === 'V') {
+      newArr.push('22')
+    } else if (log === 'w' || log === 'W') {
+      newArr.push('23')
+    } else if (log === 'x' || log === 'X') {
+      newArr.push('24')
+    } else if (log === 'y' || log === 'Y') {
+      newArr.push('25')
+    } else if (log === 'z' || log === 'Z') {
+      newArr.push('26')
+    }
+  }
+  return newArr.join(' ');
+
+}
+
+
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."), "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11");
+console.log(alphabetPosition("The narwhal bacons at midnight."), "20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20");
+
+console.log('Z'.charCodeAt(0));
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//You only need one - Beginner
+
+function check(a, x) {
+  if (a.includes(x)){
+    return true; 
+  } else {
+    return false;
+  }
+}
+
+console.log(check([101, 45, 75, 105, 99, 107], 107));
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Array.diff
+
+function arrayDiff(a, b) {
+
+  let res = a.filter(item => !b.includes(item));
+  return res;
+}
+
+
+
+console.log(arrayDiff([1,2], [1])); //[2], "a was [1,2], b was [1]"
+console.log(arrayDiff([1,2,2], [1])); //[2,2], "a was [1,2,2], b was [1]");
+console.log(arrayDiff([1,2,3], [1,2])); //[3], "a was [1,2,3], b was [1,2]")
 
 
 
@@ -561,14 +818,52 @@ function squareSum(numbers){
 
 
 
+// const marks = [-1, 10, 2,3.14, 8, 'Desimt' , true , 4, 12, [10, 2, 8, 4, 6] ,6, NaN, Infinity, {}]
+
+// const validMarks = [];
+
+// for (const mark of marks) {
+//     if (!Number.isInteger(mark) // ar tai sveikasis skaicius
+//         || mark < 1
+//         || mark > 10
+//     ) {
+//         console.log('Atmetam: ', mark);        
+//         continue; // eik i sekancia iteracija
+//     }
+//     validMarks.push(mark)
+// }
+
+
+// console.log(validMarks);
+
+// const validMarks2 = marks
+
+//     .filter(mark => mark !== 10)
+
+// console.log(validMarks2);
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Detect Pangram
 
 
 
 
+function isPangram(string){
+  let newText = string.split('');
+  let textFilter = newText.filter(char => /[a-zA-Z]/.test(char));
+  let newArr = [...new Set(textFilter)];;
+  if (newArr.length >= 26) {
+    return true;
+  } else {
+    return false;
+  }
+ 
+}
 
 
 
-
+console.log(isPangram("The quick brown fox jumps over the lazy dog."));
 
 
 

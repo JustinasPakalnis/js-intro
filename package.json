@@ -34,6 +34,7 @@
     "method-array-flat": "node --watch ./methods/array-flat.js",
     "method-every-some": "node --watch ./methods/every-some.js",
     "method-foreach": "node --watch ./methods/array-foreach.js",
+    "method-sort": "node --watch ./methods/array-sort.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
