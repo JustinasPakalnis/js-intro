@@ -455,3 +455,32 @@ console.log( isrinktiRaides( 'abc', 0 ) );
 console.log( isrinktiRaides( 'abc', 4 ) );
 console.log( isrinktiRaides( 1561, 2 ) );
 
+function validatePIN (pin) {
+
+    if (typeof pin === 'string' && !isNaN(pin)  && pin.length === 4 || pin.length === 6) {
+      return true;
+    }
+    const validSymbols = '1234567890';
+    for (const symbol of pin) {
+        if (!validSymbols.includes(symbol)) {
+            console.log('BLogas: ', symbol);
+            
+            return false;
+        }
+    }
+    return false;
+  }
+  
+  
+  
+  // function validatePIN (pin) {
+  //   return /^(\d{4}|\d{6})$/.test(pin);
+  // }
+  
+  console.log(validatePIN('123456'), true);
+  console.log(validatePIN('-1.234'), false);
+  console.log(validatePIN('a256'), false);
+  console.log(validatePIN('1256'), true);
+  console.log(validatePIN(1232), false);
+  
+  

@@ -627,24 +627,24 @@ console.log('-------------------------------------------------------------------
 
 
 
-// function validatePIN (pin) {
-//   let regex = /^[-+]?[0-9]+\.[0-9]+$/;
-//   let isValidated = regex.test(pin);
-
-//   if (isValidated === 'false') {
-//     return false
-//   }
-//   if (typeof pin === 'string' && !isNaN(pin)  && pin.length === 4 || pin.length === 6) {
-//     return true;
-//   }
-//   return false;
-// }
-
-
-
 function validatePIN (pin) {
-  return /^(\d{4}|\d{6})$/.test(pin);
+  let regex = /^[-+]?[0-9]+\.[0-9]+$/;
+  let isValidated = regex.test(pin);
+
+  if (isValidated === 'false') {
+    return false
+  }
+  if (typeof pin === 'string' && !isNaN(pin)  && pin.length === 4 || pin.length === 6) {
+    return true;
+  }
+  return false;
 }
+
+
+
+// function validatePIN (pin) {
+//   return /^(\d{4}|\d{6})$/.test(pin);
+// }
 
 console.log(validatePIN('123456'), true);
 console.log(validatePIN('a256'), false);
@@ -865,15 +865,19 @@ function isPangram(string){
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog."));
 
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Detect DECIMAL STRING
 
 
+console.log('1.234');
 
 
+function arTuSveikas() {
+  return true;
+}
 
-
-
-
-
+console.log( arTuSveikas('1.234'));
 
 
 

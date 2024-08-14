@@ -35,6 +35,7 @@
     "method-every-some": "node --watch ./methods/every-some.js",
     "method-foreach": "node --watch ./methods/array-foreach.js",
     "method-sort": "node --watch ./methods/array-sort.js",
+    "method-spread": "node --watch ./methods/spread.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
