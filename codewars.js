@@ -879,6 +879,285 @@ function arTuSveikas() {
 
 console.log( arTuSveikas('1.234'));
 
+console.clear();
+console.log('-------------------------------------------------------------------');
+//String ends with?
+
+function solution1(str, ending){
+  if (ending === '') {
+    return true;
+  }
+  return str.slice(-ending.length) === ending ? true: false
+}
+
+
+
+console.log(solution1('abcde', 'cde'));
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Counting Duplicates
+
+
+function duplicateCount(text){
+  const arr = text.split('');
+  console.log(arr);
+  const arrLower = arr.map(v => v.toLowerCase());
+  console.log(arrLower);
+  
+  const filterArr= arrLower.filter((a, i, aa) => aa.indexOf(a) === i && aa.lastIndexOf(a) !== i);
+  console.log(filterArr);
+  return filterArr.length
+}
+
+
+console.log(duplicateCount("IndivisibilitieS"));
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Find the odd int
+
+
+
+function findOdd(A) {
+  const counts = {};
+  A.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+
+  for (const key in counts) {
+
+    if (counts[key] % 2 === 1) {
+      return parseInt(key);
+    }
+  }
+}
+
+
+
+
+console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1], 4));
+
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Categorize New Member
+
+
+
+
+function openOrSenior(data){
+  let newArr = [];
+  for (const log of data) {
+    console.log(log);
+    if (log[0] >= 55 && log[1] > 7) {
+      newArr.push('Senior')
+    } else {
+      newArr.push('Open')
+    }
+  }
+  return newArr;
+}
+
+
+
+console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+console.log(openOrSenior([[3, 12],[55,1],[91, -2],[53, 23]]));
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Simple Pig Latin
+
+function pigIt(str){
+  let newArr = str.split(' ');
+  let letters = /^[A-Za-z]+$/;
+ 
+  let result = [];
+  for (const roll of newArr) {
+    if (roll.match(letters)) {
+      result.push(roll.slice(1, roll.length)+roll[0]+'ay')  
+    } else {
+      result.push(roll.slice(1, roll.length)+roll[0]) 
+    }
+      
+  }
+return result.join(' ');
+}
+
+
+
+
+console.log(pigIt('Pig latin is cool')); //'igPay atinlay siay oolcay'
+console.log(pigIt('This is my string')); //'hisTay siay ymay tringsay'
+console.log(pigIt('Hello o world !')); // elloHay orldway !
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Human Readable Time
+
+function humanReadable (seconds) {
+  let hours = Math.floor(seconds / 3600);
+  // console.log(hours);
+  let minutes = Math.floor((seconds - hours * 3600)/60);
+  // console.log(minutes);
+  let second = (seconds - hours * 3600) - (minutes * 60);
+  // console.log((seconds / 60 - hours * 60));
+  
+  return hours.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + ':' + minutes.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + ':' + second.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+}
+
+console.log(humanReadable(     0, '00:00:00'));
+console.log(humanReadable(    59, '00:00:59'));
+console.log(humanReadable(    60, '00:01:00'));
+console.log(humanReadable(    90, '00:01:30'));
+console.log(humanReadable(  3599, '00:59:59'));
+console.log(humanReadable(  3600, '01:00:00'));
+console.log(humanReadable( 45296, '12:34:56'));
+console.log(humanReadable( 86399, '23:59:59'));
+console.log(humanReadable( 86400, '24:00:00'));
+console.log(humanReadable(359999, '99:59:59'));
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Human Readable Time
+
+
+
+// function alphanumeric(string){
+//   if (string.length === 0 ) {
+//     return false;
+//   }
+//     let arrFilter = string.toLowerCase().split('').filter(char => !/[a-zA-Z]/.test(char));
+
+//     let array = arrFilter.filter(function (a) {
+//       return !/^\d+$/.test(a);
+//   });
+//   if (array.length === 0) {
+//     return true;
+//   }
+//   return false;
+// }
+
+function alphanumeric(string){
+  return /^[0-9a-z]+$/i.test(string);
+}
+
+
+console.log(alphanumeric("Mazinkaiser"), true);
+console.log(alphanumeric("hello world_"), false);
+console.log(alphanumeric("PassW0rd"), true);
+console.log(alphanumeric(""), false);
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Extract the domain name from a URL
+
+
+// function domainName(url){
+//   if (url.startsWith('http://www.')) {
+//     return url.slice('http://www.'.length).split('.')[0]
+//   }
+//   if (url.startsWith('https://www.')) {
+//     return url.slice('https://www.'.length).split('.')[0]
+//   }
+//   if (url.startsWith('http://')) {
+//     return url.slice('http://'.length).split('.')[0]
+//   }
+//   if (url.startsWith('https://')) {
+//     return url.slice('https://'.length).split('.')[0]
+//   }
+//   if (url.startsWith('www.')) {
+//     return url.slice('www.'.length).split('.')[0]
+//   }
+//   return url.split('.')[0]
+// }
+
+
+function domainName(url){
+  url = url.replace("https://", '');
+  url = url.replace("http://", '');
+  url = url.replace("www.", '');
+  return url.split('.')[0];
+};
+
+
+console.log(domainName("http://google.com"), "google");
+console.log(domainName("http://www.google.co.jp"), "google");
+console.log(domainName("www.xakep.ru"), "xakep");
+console.log(domainName("https://youtube.com"), "youtube");
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Beeramid
+
+
+
+var beeramid = function(bonus, price) {
+  console.log(bonus/price);
+  
+  let totalCans = Math.trunc(bonus/price);
+  console.log('>>>>', totalCans);
+  let level = 0;
+  let count = 1;
+  if (totalCans < 1 ) {
+    return 0;
+  } 
+  if (totalCans < 5 ) {
+    return 1;
+  } 
+  for (let i = 0 ; i < totalCans; ) {
+    
+    level++;
+    i += count*count;
+    count++;
+    console.log(i);
+    if (i > totalCans) { level-- }
+  
+  }
+  return level;
+}
+
+
+
+console.log(beeramid(454, 5), 5);
+console.log(beeramid(9, 2), 1);
+console.log(beeramid(21, 1.5), 3);
+console.log(beeramid(455, 5), 6);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
