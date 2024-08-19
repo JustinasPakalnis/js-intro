@@ -1095,10 +1095,9 @@ console.log('-------------------------------------------------------------------
 
 
 var beeramid = function(bonus, price) {
-  console.log(bonus/price);
-  
+    
   let totalCans = Math.trunc(bonus/price);
-  console.log('>>>>', totalCans);
+
   let level = 0;
   let count = 1;
   if (totalCans < 1 ) {
@@ -1112,7 +1111,7 @@ var beeramid = function(bonus, price) {
     level++;
     i += count*count;
     count++;
-    console.log(i);
+
     if (i > totalCans) { level-- }
   
   }
@@ -1127,8 +1126,207 @@ console.log(beeramid(21, 1.5), 3);
 console.log(beeramid(455, 5), 6);
 
 
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Sum Strings as Numbers
 
 
+// function sumStrings(a,b) {
+//   return a >= 9007199254740992 - 1 || b >= 9007199254740992 - 1 ? bigInt(a,b) : (a*1 + b*1) + '';
+// }
+
+// function bigInt(a,b){
+//   var c = '';
+//   var d = 0;
+  
+//   var zero = new Array((Math.abs(a.length - b.length))+1).join('0')
+  
+//   a.length >= b.length ? b = zero + b : a = zero + a;
+  
+//   for(var i = b.length-1; i >= 0; i--){
+//    var sum = (a[i]*1 + b[i]*1) + d;
+//    if(sum >= 10){
+//     sum = sum - 10;
+//     d = 1;
+//    }else{
+//     d = 0;
+//    }
+//    c = sum + c;
+//   }
+  
+//   return d > 0 ? d + c : c;
+
+
+  function sumStrings(a,b) { 
+    return (BigInt(a) + BigInt(b)).toString();
+  }
+
+
+console.log(sumStrings('123','456'));
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Perimeter of squares in a rectangle
+
+
+
+
+function perimeter(n) {
+  if (n === 0 ) {
+    return 4;
+  }
+  if (n === 1 ) {
+    return 8;
+  } 
+  let count = [1, 1];
+  let index = 0;
+  for (let i = 2; i <= n ; ) {
+    count.push(count[index]+count[index+1])
+    i++;
+    index++;
+  }
+  return count.reduce((accumulator, currentValue) => accumulator + currentValue)*4;
+}
+
+
+console.log(perimeter(0), 4);
+console.log(perimeter(5), 80);
+console.log(perimeter(7), 216);
+console.log(perimeter(20), 114624);
+console.log(perimeter(30), 14098308);
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Calculating with Functions
+
+
+const zero = a => a ? a(0) : 0
+const one = a => a ? a(1) : 1
+const two = a => a ? a(2) : 2
+const three = a => a ? a(3) : 3
+const four = a => a ? a(4) : 4
+const five = a => a ? a(5) : 5
+const six = a => a ? a(6) : 6
+const seven = a => a ? a(7) : 7
+const eight = a => a ? a(8) : 8
+const nine = a => a ? a(9) : 9
+
+const plus = a => b => a + b
+const minus = a => b => b - a
+const dividedBy = a => b => Math.floor(b / a)
+const times = a => b => a * b
+
+
+console.log(seven(times    (five ()))); //35
+console.log(eight (dividedBy     (three ())), 13);
+console.log(zero(dividedBy    (two())),  5);
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Find the missing term in an Arithmetic Progression
+
+// var findMissing = function (list) {  
+//   let stepSize = (list[list.length-1] - list[0])/list.length;
+//   console.log('>>>', list);
+
+//   let newList = [];
+//   if (list[list.length-1] > list[0]) {
+//   for (let i = list[0]; i <= list[list.length-1]; ) {
+//     if (!list.includes(i)) {
+//        newList.push(i);
+//     } 
+//     i+=stepSize;
+//     }
+//   } else if (list[list.length-1] < list[0]) {
+//     for (let i = list[0]; i >= list[list.length-1]; ) {
+//       if (!list.includes(i)) {
+//         newList.push(i);
+//       } 
+//       i+=stepSize;
+//       }
+//   }
+// return parseInt(newList);
+// }
+
+
+var findMissing = function (list) { 
+	let listLen = list.length;
+	let step = (list[listLen-1]-list[0])/listLen;
+	console.log(step);
+  
+	for(let i = 0; i < listLen; i++){
+    console.log('>>', list[i]);
+    console.log('>>', list[i+1]);
+		let next = list[i] + step
+
+    
+		if(next !== list[i+1]){
+			return next;
+		}
+	}
+}
+
+
+console.log(findMissing([ -8, -16, -20 ]));
+
+
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//ARRAY REDUCE TRAINING
+
+
+let arr = [10, 2, 16, 8, 4];
+let objArr = [
+  {x: 1},
+  {x: 5},
+  {x: 3},
+  {x: 14},
+];
+
+console.log(arr.reduce((a, b)=> a + b)); //sum
+console.log(arr.reduce((a, b)=> (a + b))/arr.length); //average
+console.log(arr.reduce((a, b)=> a + b * 2, 0)); //every number multiplied by 2
+console.log(arr.reduce((a, b)=> a > b ? a : b)); //max
+console.log(arr.reduce((a, b)=> a < b ? a : b)); //min
+
+
+console.log(objArr.reduce((a, b)=> a + b.x, 0)); //sum
+console.log(objArr.reduce((a, b)=> a + b.x, 0)/arr.length); //average
+console.log(objArr.reduce((a, b)=> a + b.x * 2, 0)); //every number multiplied by 2
+console.log(objArr.reduce((a, b)=> a > b.x ? a : b.x)); //max
+console.log(objArr.reduce((a, b)=> a < b.x ? a : b.x)); //min
+
+console.clear();
+console.log('-------------------------------------------------------------------');
+//Count IP Addresses
+
+
+
+
+function ipsBetween(start, end){
+  let newStart = start.split('.');
+  console.log(newStart);
+  let newEnd = end.split('.');
+  console.log(newEnd);
+  let calcArr = [];
+  for (let i = 0; i < 4; i++) {
+    calcArr.push(newEnd[i]-newStart[i])
+  }
+  return (calcArr[0]*16777216+calcArr[1]*65536+calcArr[2]*256+calcArr[3]);
+  
+}
+
+
+
+
+
+console.log(ipsBetween("150.0.0.0", "150.0.0.1", 1));
+console.log(ipsBetween("10.0.0.0", "10.0.0.50", 50));
+console.log(ipsBetween("20.0.0.10", "20.0.1.0", 246));
+console.log(ipsBetween("160.0.0.0", "160.0.1.0", 256));
+console.log(ipsBetween("170.0.0.0", "170.1.0.0", 65536));
 
 
 
