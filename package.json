@@ -1,7 +1,7 @@
 {
   "name": "js-intro",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "node ./index.js",
@@ -29,6 +29,7 @@
     "method-number": "node --watch ./methods/number.js",
     "method-string": "node --watch ./methods/string.js",
     "method-array": "node --watch ./methods/array.js",
+    "method-array-reduce": "node --watch ./methods/array-reduce.js",
     "method-array-map": "node --watch ./methods/array-map.js",
     "method-array-filter": "node --watch ./methods/array-filter.js",
     "method-array-flat": "node --watch ./methods/array-flat.js",
