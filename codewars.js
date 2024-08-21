@@ -1410,4 +1410,23 @@ console.log(whatCentury("02"));
 
 console.clear();
 console.log("-----------------------------------------------------");
-//neeext?
+
+// const doubleNum = (num) => {
+//   return console.log(num * 2);
+// };
+// doubleNum(2);
+
+// const greet = (name) => {
+//   return console.log(`Sveikas ${name}!`);
+// };
+// greet("Mantas");
+
+// const isEven = (num) => {
+//   console.log(num % 2 === 1 ? "False" : "True");
+// };
+// isEven(4);
+
+console.log("anas"[0].toUpperCase());
+console.log("anas"[0]);
+const str = "Namas";
+console.log(str[0] === str[0].toUpperCase());
