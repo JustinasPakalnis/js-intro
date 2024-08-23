@@ -701,7 +701,7 @@ console.log(
 );
 //People on the bus
 
-const number = function (busStops) {
+const skaicius = function (busStops) {
   let numPeople = 0;
   for (const people of busStops) {
     console.log(people);
@@ -711,7 +711,7 @@ const number = function (busStops) {
 };
 
 console.log(
-  number([
+  skaicius([
     [10, 0],
     [3, 5],
     [5, 8],
@@ -719,7 +719,7 @@ console.log(
   5
 );
 console.log(
-  number([
+  skaicius([
     [3, 0],
     [9, 1],
     [4, 10],
@@ -730,7 +730,7 @@ console.log(
   17
 );
 console.log(
-  number([
+  skaicius([
     [3, 0],
     [9, 1],
     [4, 8],
@@ -740,7 +740,7 @@ console.log(
   ]),
   21
 );
-console.log(number([[0, 0]]), 0);
+console.log(skaicius([[0, 0]]), 0);
 
 console.clear();
 console.log(
@@ -1495,14 +1495,7 @@ console.log("-----------------------------------------------------");
 6. Teksto simbolių skaičiavimas
 Parašyk funkciją, kuri priima eilutę ir grąžina objektą, kuriame yra skirtingų simbolių skaičius.
 */
-// function diff(text) {
-//   const array = text.split("");
-//   console.log(array);
-// let index = 0;
-//   for (const count of array) {
-//     for ()
-//   }
-// }
+
 function diff(text) {
   const characterCount = {};
   for (let char of text) {
@@ -1591,3 +1584,107 @@ function ilgis(eilute) {
   return eilute.length;
 }
 console.log(ilgis("labadiena su vistiena"));
+console.log("-----------------------------------------------------");
+/*
+14. Patikrink, ar masyve yra skaičius
+Parašyk funkciją, kuri priima masyvą ir skaičių, ir grąžina true, jei masyve yra tas skaičius, ir false, jei nėra.
+*/
+function arYraSkaicius(masyvas, skaicius) {
+  if (masyvas.includes(skaicius)) {
+    return true;
+  }
+  return false;
+}
+console.log(arYraSkaicius([10, -2, 6, -4, 8, 8, -10, 16], 6));
+console.log("-----------------------------------------------------");
+/*
+15. Apskaičiuok skaičiaus faktorialą
+Parašyk funkciją, kuri priima skaičių ir grąžina jo faktorialą (pvz., 5! = 5 × 4 × 3 × 2 × 1).
+*/
+function faktorialas(skaicius) {
+  for (let i = skaicius; i > 1; i--) {
+    skaicius *= i - 1;
+  }
+  return skaicius;
+}
+console.log(faktorialas(10));
+
+console.log("-----------------------------------------------------");
+/*
+16. Masyvo rūšiavimas
+Parašyk funkciją, kuri priima masyvą skaičių ir grąžina jį surūšiuotą nuo mažiausio iki didžiausio.
+*/
+function rusiuoti(masyvas) {
+  return masyvas.sort((a, b) => a - b);
+}
+console.log(rusiuoti([10, -2, 6, -4, 8, 8, -10, 16, 100000000, -10000000]));
+console.log("-----------------------------------------------------");
+/*
+17. Pašalink dublikatus iš masyvo
+Parašyk funkciją, kuri priima masyvą ir grąžina naują masyvą be pasikartojančių elementų.
+*/
+
+function dublikatai(masyvas) {
+  const matyti = {};
+  return masyvas.filter((elementas) => {
+    if (!matyti[elementas]) {
+      matyti[elementas] = true;
+      return true;
+    }
+    return false;
+  });
+}
+console.log(dublikatai([1, 2, 2, 3, 4, 4, 5, 5, 6, 10, 10]));
+
+console.log("-----------------------------------------------------");
+/*
+18. Teksto simbolių dažnio skaičiavimas
+Parašyk funkciją, kuri priima eilutę ir grąžina objektą, kurio raktai yra simboliai, o reikšmės yra tų simbolių dažnis eilutėje.
+*/
+function daznis(text) {
+  const characterCount = {};
+  for (let char of text) {
+    if (characterCount[char]) {
+      characterCount[char]++;
+    } else {
+      characterCount[char] = 1;
+    }
+  }
+  return characterCount;
+}
+console.log(daznis("BIT studentai mokosi programuoti"));
+console.log("-----------------------------------------------------");
+/*
+19. Didžiųjų raidžių keitimas į mažąsias ir atvirkščiai
+Parašyk funkciją, kuri priima eilutę ir grąžina tą pačią eilutę, bet su pakeistomis didžiosiomis raidėmis į mažąsias ir atvirkščiai.
+*/
+function raidesInvert(text) {
+  return text
+    .split("")
+    .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
+    .join("");
+}
+console.log(raidesInvert("BIT studeNtai MOKosi progrAMUOti"));
+console.log("-----------------------------------------------------");
+/*
+20. Patikrink, ar skaičius yra pirminis
+Parašyk funkciją, kuri priima skaičių ir grąžina true, jei jis yra pirminis, ir false, jei nėra.
+*/
+function pirminis(skaicius) {
+  let isPrime = true;
+  if (skaicius > 1) {
+    for (let i = 2; i < skaicius; i++) {
+      if (skaicius % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+
+    if (isPrime) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+console.log(pirminis(29));
