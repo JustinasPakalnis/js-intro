@@ -1432,7 +1432,7 @@ const str = "Namas";
 console.log(str[0] === str[0].toUpperCase());
 
 console.clear();
-console.log("-----------------------------------------------------");
+console.log("1-----------------------------------------------------");
 
 /*
 1. Skaičiaus lygumas
@@ -1441,15 +1441,10 @@ lyginis, ir "Odd", jei skaičius yra nelyginis.
  */
 
 function lyginis(skaicius) {
-  // if (skaicius % 2 === 0) {
-  //   return "lyginis";
-  // } else {
-  //   return "nelyginis";
-  // }
   return skaicius % 2 === 0 ? "lyginis" : "nelyginis";
 }
 console.log(lyginis(40));
-console.log("-----------------------------------------------------");
+console.log("2-----------------------------------------------------");
 /*
 2. Pasukant tekstą atvirkščiai
 Parašyk funkciją, kuri priima eilutę (tekstą) ir grąžina tą eilutę atvirkštine tvarka.
@@ -1458,8 +1453,8 @@ function reverse(tekstas) {
   return tekstas.split("").reverse().join("");
 }
 console.log(reverse("Laba diena BIT"));
-// .reverse().join("");
-console.log("-----------------------------------------------------");
+
+console.log("3-----------------------------------------------------");
 /*
 3. Skaičių kvadratai
 Parašyk funkciją, kuri priima masyvą skaičių ir grąžina naują masyvą, kurio kiekvienas elementas yra
@@ -1470,7 +1465,7 @@ function kvadratu(array) {
   return array.map((a) => a * a);
 }
 console.log(kvadratu([10, 2, 6, 4, 8, 8, 10, 16]));
-console.log("-----------------------------------------------------");
+console.log("4-----------------------------------------------------");
 /*
 4. Skaičių suma
 Parašyk funkciją, kuri priima du skaičius ir grąžina jų sumą.
@@ -1480,7 +1475,7 @@ function suma(a, b) {
 }
 console.log(suma(2, 3));
 
-console.log("-----------------------------------------------------");
+console.log("5-----------------------------------------------------");
 /*
 5. Kelių skaičių suma
 Parašyk funkciją, kuri priima masyvą skaičių ir grąžina jų sumą.
@@ -1490,7 +1485,7 @@ function reduce(skaiciai) {
   return skaiciai.reduce((a, b) => a + b);
 }
 console.log(reduce([10, 2, 6, 4, 8, 8, 10, 16]));
-console.log("-----------------------------------------------------");
+console.log("6-----------------------------------------------------");
 /*
 6. Teksto simbolių skaičiavimas
 Parašyk funkciją, kuri priima eilutę ir grąžina objektą, kuriame yra skirtingų simbolių skaičius.
@@ -1509,7 +1504,7 @@ function diff(text) {
 }
 console.log(diff("Laba diena su vistiena"));
 
-console.log("-----------------------------------------------------");
+console.log("7-----------------------------------------------------");
 /*
 7. Didžiausias skaičius
 Parašyk funkciją, kuri priima masyvą skaičių ir grąžina didžiausią skaičių iš masyvo.
@@ -1519,7 +1514,7 @@ function didziausias(skaiciai) {
   return skaiciai.reduce((a, b) => (a > b ? a : b));
 }
 console.log(didziausias([10, 2, 6, 4, 8, 8, 10, 16]));
-console.log("-----------------------------------------------------");
+console.log("8-----------------------------------------------------");
 /*
 8. Mažiausias skaičius
 Parašyk funkciją, kuri priima masyvą skaičių ir grąžina mažiausią skaičių iš masyvo.
@@ -1528,7 +1523,7 @@ function maziausias(skaiciai) {
   return skaiciai.reduce((a, b) => (a < b ? a : b));
 }
 console.log(maziausias([10, 2, 6, 4, 8, 8, 10, 16]));
-console.log("-----------------------------------------------------");
+console.log("9-----------------------------------------------------");
 /*
 9. Daugkartiniai žodžiai
 Parašyk funkciją, kuri priima žodį ir skaičių, ir grąžina tą žodį, kartotą tiek kartų, kiek nurodytas skaičius.
@@ -1537,7 +1532,7 @@ function pakartotasZodis(zodis, skaicius) {
   return zodis.repeat(skaicius);
 }
 console.log(pakartotasZodis("Mokomes ", 5));
-console.log("-----------------------------------------------------");
+console.log("10-----------------------------------------------------");
 /*
 10. Fibonacci seka
 Parašyk funkciją, kuri grąžina pirmuosius n Fibonacci sekos skaičius.
@@ -1556,8 +1551,8 @@ function fibonacciGenerator(n) {
   }
   return output;
 }
-console.log(fibonacciGenerator(10));
-console.log("-----------------------------------------------------");
+console.log(fibonacciGenerator(5));
+console.log("11-----------------------------------------------------");
 /*
 11. Masyvo elementų skaičiavimas
 Parašyk funkciją, kuri priima masyvą ir grąžina jo ilgį (elementų skaičių).
@@ -1566,7 +1561,7 @@ function arrayLength(array) {
   return array.length;
 }
 console.log(arrayLength([10, 2, 6, 4, "Pavadinimas", "zodis"]));
-console.log("-----------------------------------------------------");
+console.log("12-----------------------------------------------------");
 /*
 12. Filtravimas pagal sąlygas
 Parašyk funkciją, kuri priima masyvą skaičių ir grąžina naują masyvą, kuriame yra tik teigiami skaičiai.
@@ -1575,7 +1570,7 @@ function teigiami(skaiciai) {
   return skaiciai.filter((skc) => skc > 0);
 }
 console.log(teigiami([10, -2, 6, -4, 8, 8, -10, 16]));
-console.log("-----------------------------------------------------");
+console.log("13-----------------------------------------------------");
 /*
 13. Rask eilutės ilgį
 Parašyk funkciją, kuri priima eilutę ir grąžina tos eilutės ilgį.
@@ -1584,7 +1579,7 @@ function ilgis(eilute) {
   return eilute.length;
 }
 console.log(ilgis("labadiena su vistiena"));
-console.log("-----------------------------------------------------");
+console.log("14-----------------------------------------------------");
 /*
 14. Patikrink, ar masyve yra skaičius
 Parašyk funkciją, kuri priima masyvą ir skaičių, ir grąžina true, jei masyve yra tas skaičius, ir false, jei nėra.
@@ -1596,7 +1591,7 @@ function arYraSkaicius(masyvas, skaicius) {
   return false;
 }
 console.log(arYraSkaicius([10, -2, 6, -4, 8, 8, -10, 16], 6));
-console.log("-----------------------------------------------------");
+console.log("15-----------------------------------------------------");
 /*
 15. Apskaičiuok skaičiaus faktorialą
 Parašyk funkciją, kuri priima skaičių ir grąžina jo faktorialą (pvz., 5! = 5 × 4 × 3 × 2 × 1).
@@ -1609,7 +1604,7 @@ function faktorialas(skaicius) {
 }
 console.log(faktorialas(10));
 
-console.log("-----------------------------------------------------");
+console.log("16-----------------------------------------------------");
 /*
 16. Masyvo rūšiavimas
 Parašyk funkciją, kuri priima masyvą skaičių ir grąžina jį surūšiuotą nuo mažiausio iki didžiausio.
@@ -1618,7 +1613,7 @@ function rusiuoti(masyvas) {
   return masyvas.sort((a, b) => a - b);
 }
 console.log(rusiuoti([10, -2, 6, -4, 8, 8, -10, 16, 100000000, -10000000]));
-console.log("-----------------------------------------------------");
+console.log("17-----------------------------------------------------");
 /*
 17. Pašalink dublikatus iš masyvo
 Parašyk funkciją, kuri priima masyvą ir grąžina naują masyvą be pasikartojančių elementų.
@@ -1636,7 +1631,7 @@ function dublikatai(masyvas) {
 }
 console.log(dublikatai([1, 2, 2, 3, 4, 4, 5, 5, 6, 10, 10]));
 
-console.log("-----------------------------------------------------");
+console.log("18-----------------------------------------------------");
 /*
 18. Teksto simbolių dažnio skaičiavimas
 Parašyk funkciją, kuri priima eilutę ir grąžina objektą, kurio raktai yra simboliai, o reikšmės yra tų simbolių dažnis eilutėje.
@@ -1653,7 +1648,7 @@ function daznis(text) {
   return characterCount;
 }
 console.log(daznis("BIT studentai mokosi programuoti"));
-console.log("-----------------------------------------------------");
+console.log("19-----------------------------------------------------");
 /*
 19. Didžiųjų raidžių keitimas į mažąsias ir atvirkščiai
 Parašyk funkciją, kuri priima eilutę ir grąžina tą pačią eilutę, bet su pakeistomis didžiosiomis raidėmis į mažąsias ir atvirkščiai.
@@ -1665,7 +1660,7 @@ function raidesInvert(text) {
     .join("");
 }
 console.log(raidesInvert("BIT studeNtai MOKosi progrAMUOti"));
-console.log("-----------------------------------------------------");
+console.log("20-----------------------------------------------------");
 /*
 20. Patikrink, ar skaičius yra pirminis
 Parašyk funkciją, kuri priima skaičių ir grąžina true, jei jis yra pirminis, ir false, jei nėra.
@@ -1679,7 +1674,6 @@ function pirminis(skaicius) {
         break;
       }
     }
-
     if (isPrime) {
       return true;
     } else {
@@ -1688,3 +1682,47 @@ function pirminis(skaicius) {
   }
 }
 console.log(pirminis(29));
+
+console.clear();
+console.log("-----------------------------------------------------");
+//Your order, please
+
+// function order(words) {
+//   let newArr = words.split(" ");
+//   // console.log(newArr);
+//   let filterArr = [];
+//   if (words.length === 0) {
+//     return "";
+//   }
+//   for (const check of newArr) {
+//     console.log(check.split("").find((element) => parseInt(element)));
+//     filterArr.push(
+//       newArr[check.split("").find((element) => parseInt(element)) - 1]
+//     );
+//   }
+//   return filterArr.join(" ");
+// }
+function order(words) {
+  return words
+    .split(" ")
+    .sort(function (a, b) {
+      return a.match(/\d/) - b.match(/\d/);
+    })
+    .join(" ");
+}
+
+//Others
+// function order(words){
+//   if (words.length == 0){return words}
+//   let wordsarr = words.split(' ');
+//   let indarr = words.match(/\d/g);
+//   let neword = [];
+//   for (let i=1;i<=indarr.length;i++){
+//     let ind = indarr.indexOf(i.toString())
+//     neword.push(wordsarr[ind])
+//   }
+//   return neword.join(' ')
+// }
+
+console.log(order("is2 Thi1s T4est 3a")); //"Thi1s is2 3a T4est"
+console.log(order("4of Fo1r pe6ople g3ood th5e the2")); //"Fo1r the2 g3ood 4of th5e pe6ople"
