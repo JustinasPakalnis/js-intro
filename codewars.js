@@ -1687,21 +1687,6 @@ console.clear();
 console.log("-----------------------------------------------------");
 //Your order, please
 
-// function order(words) {
-//   let newArr = words.split(" ");
-//   // console.log(newArr);
-//   let filterArr = [];
-//   if (words.length === 0) {
-//     return "";
-//   }
-//   for (const check of newArr) {
-//     console.log(check.split("").find((element) => parseInt(element)));
-//     filterArr.push(
-//       newArr[check.split("").find((element) => parseInt(element)) - 1]
-//     );
-//   }
-//   return filterArr.join(" ");
-// }
 function order(words) {
   return words
     .split(" ")
@@ -1726,3 +1711,267 @@ function order(words) {
 
 console.log(order("is2 Thi1s T4est 3a")); //"Thi1s is2 3a T4est"
 console.log(order("4of Fo1r pe6ople g3ood th5e the2")); //"Fo1r the2 g3ood 4of th5e pe6ople"
+
+console.clear();
+console.log("-----------------------------------------------------");
+//Numbers of Letters of Numbers
+
+// function numbersOfLetters(integer) {
+//   console.log(integer);
+//   if (integer === 4) {
+//     return ["four"];
+//   }
+//   let arr = [];
+//   let first = [];
+//   const newArr = integer.toString().split("");
+//   function makeArray(number) {
+//     for (const check of number) {
+//       check === "0"
+//         ? arr.push("zero")
+//         : check === "1"
+//         ? arr.push("one")
+//         : check === "2"
+//         ? arr.push("two")
+//         : check === "3"
+//         ? arr.push("three")
+//         : check === "4"
+//         ? arr.push("four")
+//         : check === "5"
+//         ? arr.push("five")
+//         : check === "6"
+//         ? arr.push("six")
+//         : check === "7"
+//         ? arr.push("seven")
+//         : check === "8"
+//         ? arr.push("eight")
+//         : arr.push("nine");
+//     }
+//     arr = arr.join("");
+//     first.push(arr);
+//     arr = [];
+//   }
+//   makeArray(newArr);
+//   for (let i = 0; i < 999; i++) {
+//     makeArray(first[i].length.toString());
+//     console.log(first[i]);
+//     console.log(first[i + 1]);
+
+//     if (first[i].length === first[i + 1].length || first[i] === first[i + 1]) {
+//       break;
+//     }
+//   }
+
+//   return first;
+// }
+
+function numbersOfLetters(integer) {
+  let hash = [
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
+  let result = [];
+
+  let text = "q".repeat(integer);
+  console.log(text.length + "");
+
+  do {
+    text = (text.length + "")
+      .split("")
+      .map((number) => hash[number])
+      .join("");
+    result.push(text);
+  } while (text != hash[text.length]);
+
+  return result;
+}
+
+// console.log(numbersOfLetters(1), ["one", "three", "five", "four"]);
+// console.log(numbersOfLetters(12), ["onetwo", "six", "three", "five", "four"]);
+console.log(numbersOfLetters(4), [
+  "threeseven",
+  "onezero",
+  "seven",
+  "five",
+  "four",
+]);
+// console.log(numbersOfLetters(311), [
+//   "threeoneone",
+//   "oneone",
+//   "six",
+//   "three",
+//   "five",
+//   "four",
+// ]);
+// console.log(numbersOfLetters(999), [
+//   "nineninenine",
+//   "onetwo",
+//   "six",
+//   "three",
+//   "five",
+//   "four",
+// ]);
+
+console.clear();
+console.log("-----------------------------------------------------");
+//The highest profit wins!
+
+function minMax(arr) {
+  const max = arr.reduce((a, b) => (a > b ? a : b));
+  const min = arr.reduce((a, b) => (a < b ? a : b));
+  return [min, max];
+}
+
+console.log(minMax([5, 200]));
+
+console.clear();
+console.log("-----------------------------------------------------");
+//WeIrD StRiNg CaSe
+
+function toWeirdCase(string) {
+  return string
+    .split(" ")
+    .map((element) =>
+      element
+        .split("")
+        .map((letter, index) =>
+          index % 2 === 0 ? letter.toUpperCase() : letter.toLowerCase()
+        )
+        .join("")
+    )
+    .join(" ");
+}
+
+console.log(toWeirdCase("This is a test", "ThIs Is A TeSt"));
+console.log(toWeirdCase("unique", "UnIqUe"));
+console.log(toWeirdCase("UPPER CASE", "UpPeR CaSe"));
+
+console.clear();
+console.log("-----------------------------------------------------");
+//WeIrD StRiNg CaSe
+
+function hamming(a, b) {
+  let count = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(hamming("I like turtles", "I like turkeys", 3));
+console.log(hamming("hello world", "hello tokyo", 4));
+console.log(
+  hamming("old father, old artificer", "of my soul the uncreated ", 3)
+);
+
+console.clear();
+console.log("-----------------------------------------------------");
+//Good vs Evil
+
+function goodVsEvil(good, evil) {
+  const goodPower = [1, 2, 3, 3, 4, 10];
+  const evilPower = [1, 2, 2, 2, 3, 5, 10];
+  const goodPowerTotal = good
+    .split(" ")
+    .map((count, index) => count * goodPower[index])
+    .reduce((a, b) => a + b);
+  const evilPowerTotal = evil
+    .split(" ")
+    .map((count, index) => count * evilPower[index])
+    .reduce((a, b) => a + b);
+  console.log(goodPowerTotal);
+  console.log(evilPowerTotal);
+  return goodPowerTotal === evilPowerTotal
+    ? "Battle Result: No victor on this battle field"
+    : goodPowerTotal > evilPowerTotal
+    ? "Battle Result: Good triumphs over Evil"
+    : "Battle Result: Evil eradicates all trace of Good";
+}
+
+console.log(goodVsEvil("1 1 1 1 1 1", "1 1 1 1 1 1 1"));
+console.log(goodVsEvil("0 0 0 0 0 10", "0 1 1 1 1 0 0"));
+console.log(goodVsEvil("1 0 0 0 0 0", "1 0 0 0 0 0 0"));
+
+console.clear();
+console.log("-----------------------------------------------------");
+//Points in the circle
+
+function pointsNumber(r) {
+  let points = 0;
+  console.log(r);
+
+  for (let i = -r; i <= r; i++) {
+    for (let j = -r; j <= r; j++) {
+      if (i * i + j * j <= r * r) points++;
+    }
+  }
+  return points;
+}
+
+console.log(pointsNumber(1), 5);
+console.log(pointsNumber(2), 13);
+console.log(pointsNumber(5), 81);
+
+console.clear();
+console.log("-----------------------------------------------------");
+//Vector Affinity
+
+function vectorAffinity(xs, ys) {
+  console.log(xs.length);
+  console.log(ys.length);
+  if (xs.length === 0 && ys.length === 0) {
+    return 1;
+  }
+  let index = 0;
+  let count = 0;
+  const max = xs.length > ys.length ? xs : ys;
+  if (xs.length >= ys.length) {
+    for (const check of xs) {
+      if (check === ys[index]) {
+        count++;
+      }
+      index++;
+    }
+  } else if (xs.length < ys.length) {
+    for (const check of ys) {
+      if (check === xs[index]) {
+        count++;
+      }
+      index++;
+    }
+  }
+  return count / max.length;
+}
+// console.log(vectorAffinity([1, 2, 3, 4, 5], [1, 2, 2, 4, 3]), 3 / 5);
+// console.log(vectorAffinity([null], []), 0);
+console.log(vectorAffinity([], []), 1);
+// console.log(vectorAffinity([1, 2, 3], [1, 2, 3]), 1);
+// console.log(vectorAffinity([1, 2, 3], [1, 2, 3, 4, 5]), 3 / 5);
+// console.log(vectorAffinity([1, 2, 3, 4], [1, 2, 3, 5]), 3 / 4);
+// console.log(vectorAffinity([null], [null, null]), 1 / 2);
+
+console.clear();
+console.log("-----------------------------------------------------");
+//How many eggs?
+
+function egged(year, span) {
+  if (year === 0) {
+    return "No chickens yet!";
+  }
+  console.log(year);
+  console.log(span);
+}
+
+// console.log(egged(0, 5), "No chickens yet!");
+console.log(egged(2, 1), 900);
+console.log(egged(4, 8), 2655);
+console.log(egged(74, 10), 3984);
