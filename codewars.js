@@ -1961,17 +1961,53 @@ console.log(vectorAffinity([], []), 1);
 
 console.clear();
 console.log("-----------------------------------------------------");
-//How many eggs?
+//Find the missing letter
 
-function egged(year, span) {
-  if (year === 0) {
-    return "No chickens yet!";
+function findMissingLetter(array) {
+  const newArr = array.join("").toUpperCase().split("");
+  let index = 0;
+  const abcd = [
+    "A", //1
+    "B", //2
+    "C", //3
+    "D", //4
+    "E", //5
+    "F", //6
+    "G", //7
+    "H", //8
+    "I", //9
+    "J", //10
+    "K", //11
+    "L", //12
+    "M", //13
+    "N", //14
+    "O", //15
+    "P", //16
+    "Q", //17
+    "R", //18
+    "S", //19
+    "T", //20
+    "U", //21
+    "V", //22
+    "W", //23
+    "X", //24
+    "Y", //25
+    "Z", //26
+  ];
+  let starting = abcd.indexOf(newArr[0]);
+
+  for (starting; starting <= starting + array.length; starting++) {
+    // console.log(newArr[index], abcd[starting]);
+    if (newArr[index] !== abcd[starting]) {
+      if (array[0] === array[0].toUpperCase()) {
+        return abcd[starting];
+      } else {
+        return abcd[starting].toLocaleLowerCase();
+      }
+    }
+    index++;
   }
-  console.log(year);
-  console.log(span);
 }
 
-// console.log(egged(0, 5), "No chickens yet!");
-console.log(egged(2, 1), 900);
-console.log(egged(4, 8), 2655);
-console.log(egged(74, 10), 3984);
+console.log(findMissingLetter(["a", "b", "c", "d", "f"]), "e");
+console.log(findMissingLetter(["O", "Q", "R", "S"]), "P");
