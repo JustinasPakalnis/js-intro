@@ -2011,3 +2011,87 @@ function findMissingLetter(array) {
 
 console.log(findMissingLetter(["a", "b", "c", "d", "f"]), "e");
 console.log(findMissingLetter(["O", "Q", "R", "S"]), "P");
+
+console.clear();
+console.log("-----------------------------------------------------");
+//If you can read this...
+
+function toNato(words) {
+  // you can access the preloaded NATO dictionary
+  // NATO['A'] === 'Alfa', etc.
+  let h = {
+    A: "Alfa",
+    B: "Bravo",
+    C: "Charlie",
+    D: "Delta",
+    E: "Echo",
+    F: "Foxtrot",
+    G: "Golf",
+    H: "Hotel",
+    I: "India",
+    J: "Juliett",
+    K: "Kilo",
+    L: "Lima",
+    M: "Mike",
+    N: "November",
+    O: "Oscar",
+    P: "Papa",
+    Q: "Quebec",
+    R: "Romeo",
+    S: "Sierra",
+    T: "Tango",
+    U: "Uniform",
+    V: "Victor",
+    W: "Whiskey",
+    X: "Xray",
+    Y: "Yankee",
+    Z: "Zulu",
+  };
+  const newArr = words
+    .toUpperCase()
+    .split(/\b/)
+
+    .join(" ")
+    .split("")
+    .filter((filter) => filter !== " ");
+  console.log(newArr);
+
+  return newArr
+    .map((word) =>
+      word === "!"
+        ? "!"
+        : word === "?"
+        ? "?"
+        : word === ","
+        ? ","
+        : word === "."
+        ? "."
+        : h[word]
+    )
+    .join(" ");
+}
+// console.log(
+//   "India Foxtrot Yankee Oscar Uniform Charlie Alfa November Romeo Echo Alfa Delta"
+// );
+console.log(toNato("If you can read"));
+console.log(toNato("Did not see that coming"));
+console.log(toNato("go for it!"));
+
+console.clear();
+console.log("-----------------------------------------------------");
+//Highest and Lowest
+
+// function highAndLow(numbers) {
+//   const intArray = numbers.split(" ").map((a) => parseInt(a));
+//   console.log(intArray);
+
+//   const max = intArray.reduce((a, b) => (a > b ? a : b));
+//   const min = intArray.reduce((a, b) => (a < b ? a : b));
+//   return `${max} ${min}`;
+// }
+function highAndLow(numbers) {
+  numbers = numbers.split(" ");
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
+
+console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "42 -9");
